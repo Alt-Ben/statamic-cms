@@ -38,7 +38,7 @@ class UserRole extends Filter
                     ->distinct('user_id')
                     ->pluck('user_id')
                     ->toArray();
-                    
+
                 $query->whereIn('id', $userIds);
             } else {
                 $query->where('roles/'.$values['role'], true);
